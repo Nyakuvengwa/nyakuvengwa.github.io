@@ -1,21 +1,54 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import HomeHero from "../components/HomeHero.astro";
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code2, Briefcase, GraduationCap } from 'lucide-react';
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body>
-        <Header title={SITE_TITLE} />
-        <main>
-            <HomeHero />
-        </main>
-        <Footer />
-    </body>
-</html>
+<Layout title="Arthur Moyo - Senior Software Engineer">
+	<main class="container mx-auto px-4 py-8">
+		<div class="flex flex-col items-center mb-12">
+			<h1 class="text-4xl font-bold mb-2">Arthur Moyo</h1>
+			<p class="text-2xl text-muted-foreground mb-4">Crafting Elegant Solutions for Complex Problems</p>
+			<div class="flex space-x-2 mb-6">
+				<Badge variant="secondary"><Code2 className="w-4 h-4 mr-1" /> Full Stack</Badge>
+				<Badge variant="secondary"><Briefcase className="w-4 h-4 mr-1" /> 10+ Years</Badge>
+				<Badge variant="secondary"><GraduationCap className="w-4 h-4 mr-1" /> MSc Computer Science</Badge>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<Card>
+				<CardHeader>
+					<CardTitle>Expertise</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<ul class="list-disc list-inside">
+						<li>Full-Stack Development - Proficient in C#, .NET Core, Angular, Vue.js, React, SQL Server, PostgreSQL, MongoDB, Kafka, RabbitMQ, microservices, Azure, AWS, TDD, CI/CD, Scrum/Agile, Domain-Driven Design, OOD, SOA, containerization, Kubernetes, and more.  </li>
+						<li>Technical Expertise - Strong foundation in database design, performance optimization, security, privacy, SOAP/REST APIs, and DevOps culture.</li>
+						<li>Problem-Solving and Collaboration: Experienced in applying problem-solving techniques, adapting to new technologies, enhancing project efficiency, and collaborating effectively through pair programming and peer code reviews.</li>
+						<li>Agile and Continuous Delivery -  Proficient in Agile methodologies, continuous delivery, automated testing, and continuous integration.</li>
+					</ul>
+				</CardContent>
+			</Card>
+			<Card>
+				<CardHeader>
+					<CardTitle>Recent Projects</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-2">
+						<li>
+							<strong>E-commerce Platform Overhaul</strong>
+							<p class="text-sm text-muted-foreground">Improved performance by 200% and increased conversion rates</p>
+						</li>
+						<li>
+							<strong>AI-Powered Chatbot</strong>
+							<p class="text-sm text-muted-foreground">Reduced customer support workload by 40%</p>
+						</li>
+					</ul>
+				</CardContent>
+			</Card>
+		</div>
+	</main>
+</Layout>

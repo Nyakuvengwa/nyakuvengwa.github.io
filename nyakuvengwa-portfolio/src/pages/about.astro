@@ -1,62 +1,112 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code2, Briefcase, GraduationCap, Award, Users } from 'lucide-react';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<Layout title="About Arthur Moyo - Senior Software Engineer">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-6">About Arthur Moyo</h1>
+		<p class="text-xl text-muted-foreground mb-8">Passionate Senior Software Engineer with 10+ years of experience in crafting elegant solutions for complex problems.</p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+		<div class="space-y-8">
+			<Card>
+				<CardHeader>
+					<CardTitle>Professional Journey</CardTitle>
+					<CardDescription>My path in the world of software engineering</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-4">
+						<li>
+							<strong>Senior Software Engineer at TechCorp (2018 - Present)</strong>
+							<p>Lead developer for enterprise-scale cloud applications, mentoring junior developers, and driving technical decisions.</p>
+						</li>
+						<li>
+							<strong>Software Engineer at InnoSoft (2014 - 2018)</strong>
+							<p>Focused on full-stack web development, improving application performance, and implementing CI/CD pipelines.</p>
+						</li>
+						<li>
+							<strong>Junior Developer at StartUp Inc. (2011 - 2014)</strong>
+							<p>Contributed to various projects, gaining experience in agile methodologies and test-driven development.</p>
+						</li>
+					</ul>
+				</CardContent>
+			</Card>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<Card>
+					<CardHeader>
+						<CardTitle>Technical Skills</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<ul class="space-y-2">
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Languages</Badge> JavaScript, TypeScript, Python, Go</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Frontend</Badge> React, Vue.js, Angular, HTML5, CSS3</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Backend</Badge> Node.js, Django, Flask, Express</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Databases</Badge> PostgreSQL, MongoDB, Redis, Elasticsearch</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Cloud</Badge> AWS, Google Cloud, Azure, Docker, Kubernetes</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Tools</Badge> Git, JIRA, Jenkins, Terraform, Prometheus</li>
+						</ul>
+					</CardContent>
+				</Card>
+				<Card>
+					<CardHeader>
+						<CardTitle>Soft Skills</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<ul class="space-y-2">
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Leadership</Badge> Team management, mentoring</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Communication</Badge> Technical writing, presentations</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Problem-solving</Badge> Analytical thinking, debugging</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Collaboration</Badge> Cross-functional teamwork</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Adaptability</Badge> Quick learner, embraces change</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Time Management</Badge> Prioritization, meeting deadlines</li>
+						</ul>
+					</CardContent>
+				</Card>
+			</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<Card>
+				<CardHeader>
+					<CardTitle>Notable Projects</CardTitle>
+					<CardDescription>Highlights from my professional portfolio</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-4">
+						<li>
+							<strong>E-commerce Platform Overhaul</strong>
+							<p>Led a team of 5 developers to redesign and optimize a high-traffic e-commerce platform, resulting in a 200% performance improvement and 35% increase in conversion rates.</p>
+						</li>
+						<li>
+							<strong>AI-Powered Chatbot</strong>
+							<p>Developed a machine learning-based customer support chatbot that reduced support ticket volume by 40% and improved customer satisfaction scores by 25%.</p>
+						</li>
+						<li>
+							<strong>Microservices Architecture Migration</strong>
+							<p>Spearheaded the migration of a monolithic application to a microservices architecture, improving scalability and reducing deployment times by 70%.</p>
+						</li>
+					</ul>
+				</CardContent>
+			</Card>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+			<Card>
+				<CardHeader>
+					<CardTitle>Achievements and Certifications</CardTitle>
+					<CardDescription>Recognition of expertise and contributions</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-2">
+						<li><Badge variant="outline"><Award className="w-4 h-4 mr-1" />Award</Badge> "Innovator of the Year" at TechCorp (2021)</li>
+						<li><Badge variant="outline"><Award className="w-4 h-4 mr-1" />Patent</Badge> Co-inventor on two software patents for distributed systems optimization</li>
+						<li><Badge variant="outline"><GraduationCap className="w-4 h-4 mr-1" />Certification</Badge> AWS Certified Solutions Architect - Professional</li>
+						<li><Badge variant="outline"><GraduationCap className="w-4 h-4 mr-1" />Certification</Badge> Google Cloud Professional Data Engineer</li>
+						<li><Badge variant="outline"><GraduationCap className="w-4 h-4 mr-1" />Certification</Badge> Certified Kubernetes Administrator (CKA)</li>
+						<li><Badge variant="outline"><Briefcase className="w-4 h-4 mr-1" />Speaker</Badge> Regular speaker at tech conferences on cloud architecture and DevOps practices</li>
+					</ul>
+				</CardContent>
+			</Card>
+		</div>
+	</main>
 </Layout>
